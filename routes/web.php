@@ -8,6 +8,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/menu', function () {
+
+    return view('menu');
+});
+
 Route::get('halo', function () {
 	return "<h1>Halo, Selamat datang</h1> di tutorial laravel www.malasngoding.com</b>";
 });
