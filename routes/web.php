@@ -7,6 +7,7 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\KabelDBController;
 use	App\Http\Controllers\KeranjangDBController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\NilaiKuliahController;
 
 Route::get('/', function () {
 
@@ -94,3 +95,8 @@ Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
 Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+// Route CRUD Nilai Kuliah (PR 3)
+Route::get('/nilaikuliah', [NilaiKuliahController::class, 'index']);
+Route::get('/nilaikuliah/tambah', [NilaiKuliahController::class, 'tambah']);
+Route::post('/nilaikuliah/store', [NilaiKuliahController::class, 'store']);
