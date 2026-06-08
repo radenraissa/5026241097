@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\KabelDBController;
+use	App\Http\Controllers\KeranjangDBController;
 
 Route::get('/', function () {
 
@@ -70,3 +72,17 @@ Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+// CRUD table kabel (Adaptasi dari pegawai)
+Route::get('/kabel', [KabelDBController::class, 'index']);
+Route::get('/kabel/tambah', [KabelDBController::class, 'tambah']);
+Route::post('/kabel/store', [KabelDBController::class, 'store']);
+Route::get('/kabel/edit/{id}', [KabelDBController::class, 'edit']);
+Route::post('/kabel/update', [KabelDBController::class, 'update']);
+Route::get('/kabel/hapus/{id}', [KabelDBController::class, 'hapus']);
+Route::get('/kabel/cari', [KabelDBController::class, 'cari']);
+
+Route::get('/keranjangbelanja', [KeranjangDBController::class, 'indexkeranjang']);
+Route::get('/keranjangbeli/', [KeranjangDBController::class, 'belikeranjang']);
+Route::post('/keranjangstore', [KeranjangDBController::class, 'storekeranjang']);
+Route::get('/keranjangbatal/{id}', [KeranjangDBController::class, 'batal']);

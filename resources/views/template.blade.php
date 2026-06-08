@@ -22,13 +22,16 @@
             <div class="container-fluid">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/pegawai">Pegawai</a>
+                        <a class="nav-link {{ Request::is('pegawai*') ? 'active' : '' }}" href="/pegawai">Pegawai</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PR 1</a>
+                        <a class="nav-link {{ Request::is('kabel*') ? 'active' : '' }}" href="/kabel">Kabel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PR 2</a>
+                        <a class="nav-link {{ Request::is('siswa*') ? 'active' : '' }}" href="/siswa">Siswa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/keranjangbelanja">PR 2</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">PR 3</a>
