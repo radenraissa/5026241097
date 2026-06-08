@@ -14,7 +14,7 @@
         </tr>
         @foreach ($keranjang as $kr)
             <tr>
-                <td>{{ $kr->ID }}</td>
+                <td>{{ $loop->iteration }}</td>
                 <td>{{ $kr->KodeBarang }}</td>
                 <td>{{ $kr->Jumlah }}</td>
                 <td>{{ number_format($kr->Harga, 0, ',', '.') }}</td>
