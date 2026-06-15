@@ -38,7 +38,8 @@
                             3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">EAS</a>
+                        <a class="nav-link {{ Request::is('eas*') ? 'active' : '' }}" href="/eas">EAS
+                            </a>
                     </li>
                 </ul>
             </div>

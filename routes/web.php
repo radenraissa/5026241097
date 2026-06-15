@@ -8,6 +8,7 @@ use App\Http\Controllers\KabelDBController;
 use	App\Http\Controllers\KeranjangDBController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\NilaiKuliahController;
+use App\Http\Controllers\MykaryawanController;
 
 Route::get('/', function () {
 
@@ -100,3 +101,7 @@ Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.
 Route::get('/nilaikuliah', [NilaiKuliahController::class, 'index']);
 Route::get('/nilaikuliah/tambah', [NilaiKuliahController::class, 'tambah']);
 Route::post('/nilaikuliah/store', [NilaiKuliahController::class, 'store']);
+
+// Route CRUD Nilai Kuliah (PR 3)
+Route::get('/eas', [MykaryawanController::class, 'index']);
+Route::get('/eas/lihat/{kodepegawai}', [MykaryawanController::class, 'lihat']);
