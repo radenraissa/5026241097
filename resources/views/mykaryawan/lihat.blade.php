@@ -3,7 +3,7 @@
 @section('konten')
 
     <a href="/eas" class="btn btn-secondary mb-4">Kembali</a>
-    
+
     @foreach($mykaryawan as $k)
     <div class="card">
         <div class="card-header">
@@ -21,12 +21,12 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                    <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
+                 <div class="row mb-3">
+                    <label for="namalengkap" class="col-sm-2 col-form-label">Nama Lengkap</label>
                     <div class="col-sm-10">
-                        <div class="form-control-plaintext" id="jabatan">{{ $k->jabatan }}</div>
-                    </div>
+                        <div class="form-control-plaintext" id="namalengkap">{{ ucwords(strtolower($k->namalengkap)) }}</div>
                 </div>
+
 
                 <div class="row mb-3">
                     <label for="divisi" class="col-sm-2 col-form-label">Divisi</label>

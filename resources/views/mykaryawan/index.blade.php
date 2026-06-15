@@ -15,7 +15,7 @@
         @foreach ($mykaryawan as $k)
             <tr>
                 <td>{{ $k->kodepegawai }}</td>
-                <td>{{ $k->namalengkap }}</td>
+                <td>{{ ucwords(strtolower($k->namalengkap)) }}</td>
                 <td>{{ $k->divisi }}</td>
                 <td>{{ $k->departemen }}</td>
                 <td>

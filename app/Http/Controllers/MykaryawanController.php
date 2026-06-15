@@ -14,10 +14,11 @@ class MykaryawanController extends Controller
     }
 
  
-	public function lihat()
+	public function lihat($kodepegawai)
     {
         // untuk melihat satu record 
-        return view('mykaryawan.lihat', ['kodepegawai' => $k->kodepegawai]);
+        $mykaryawan = DB::table('mykaryawan')->where('kodepegawai', $kodepegawai)->get();
+        return view('mykaryawan.lihat', ['mykaryawan' => $mykaryawan]);
     }
 	
 }
